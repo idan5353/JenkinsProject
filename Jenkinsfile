@@ -23,10 +23,17 @@ pipeline {
     }
 
     stage('Deploy') {
-      steps {
-        echo 'Deploying app... (skipped for now)'
-        // For example, you can add docker build/push or AWS deploy here
-      }
+  steps {
+    sshagent(['jenkins-ssh-credentials-id']) {
+      sh '''
+        ssh -o StrictHostKeyChecking=no ubuntu@<app-server-public-ip> << EOF
+          cd JenkinsProject || git clone https://github.com/idan5353/JenkinsProject.git JenkinsProject && cd JenkinsProject
+          git pull origin main
+          npm install
+          pm2 restart simple-app || pm2 start index.js --name simple-app
+        EOF
+      '''
     }
   }
 }
+
