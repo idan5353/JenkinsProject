@@ -24,7 +24,7 @@ pipeline {
 
     stage('Deploy') {
       steps {
-        echo 'Deploying...'
+        echo 'Deploying... it worked!'
         // Docker, EKS, SCP, etc.
       }
     }
