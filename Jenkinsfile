@@ -24,7 +24,7 @@ pipeline {
 
     stage('Deploy') {
   steps {
-    sshagent(['your-credential-id']) {
+    sshagent(['5']) {
       sh """
         ssh -o StrictHostKeyChecking=no ubuntu@http://3.84.240.217/ 'bash -s' <<'ENDSSH'
           cd JenkinsProject || git clone https://github.com/idan5353/JenkinsProject.git JenkinsProject && cd JenkinsProject
