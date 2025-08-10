@@ -3,6 +3,7 @@
 This project demonstrates a simple Continuous Integration and Continuous Deployment (CI/CD) pipeline using Jenkins to deploy a Node.js Express app to an Ubuntu EC2 instance.
 
 ---
+<img width="1536" height="1024" alt="ChatGPT Image Aug 10, 2025, 10_42_41 PM" src="https://github.com/user-attachments/assets/ef34a383-7fd0-4c3b-aa6a-ac2afacba25f" />
 
 ## Project Structure
 
@@ -66,3 +67,5 @@ const port = process.env.PORT || 3000;
 app.listen(port, '0.0.0.0', () => {
   console.log(`App running on port ${port}`);
 });
+<img width="1908" height="909" alt="jenkins1" src="https://github.com/user-attachments/assets/d60223fa-4726-403b-9f19-2fb6302a2290" />
+
