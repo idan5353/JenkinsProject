@@ -10,22 +10,22 @@ pipeline {
 
     stage('Build') {
       steps {
-        echo 'Building the app...'
-        // Add build steps here
+        echo 'Installing dependencies...'
+        sh 'npm install'
       }
     }
 
     stage('Test') {
       steps {
         echo 'Running tests...'
-        // Add test steps
+        sh 'npm test'
       }
     }
 
     stage('Deploy') {
       steps {
-        echo 'Deploying... it worked!'
-        // Docker, EKS, SCP, etc.
+        echo 'Deploying app... (skipped for now)'
+        // For example, you can add docker build/push or AWS deploy here
       }
     }
   }
