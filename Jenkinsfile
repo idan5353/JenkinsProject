@@ -24,18 +24,19 @@ pipeline {
 
     stage('Deploy') {
   steps {
-    sshagent(['5']) {
+    sshagent(['your-credential-id']) {
       sh """
-        ssh -o StrictHostKeyChecking=no ubuntu@3.84.240.217 'bash -s' <<'ENDSSH'
-          cd JenkinsProject || git clone https://github.com/idan5353/JenkinsProject.git JenkinsProject && cd JenkinsProject
-          git pull origin main
-          npm install
-          pm2 restart simple-app || pm2 start index.js --name simple-app
-        ENDSSH
+        ssh -o StrictHostKeyChecking=no ubuntu@3.84.240.217 'bash -s' << 'ENDSSH'
+cd JenkinsProject || git clone https://github.com/idan5353/JenkinsProject.git JenkinsProject && cd JenkinsProject
+git pull origin main
+npm install
+pm2 restart simple-app || pm2 start index.js --name simple-app
+ENDSSH
       """
     }
   }
 }
+
 
   } // close stages
 
