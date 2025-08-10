@@ -4,6 +4,7 @@ This project demonstrates a simple Continuous Integration and Continuous Deploym
 
 ---
 <img width="1536" height="1024" alt="ChatGPT Image Aug 10, 2025, 10_42_41 PM" src="https://github.com/user-attachments/assets/ef34a383-7fd0-4c3b-aa6a-ac2afacba25f" />
+<img width="1908" height="909" alt="jenkins1" src="https://github.com/user-attachments/assets/5016fdc7-6f04-4571-811d-6cbdacfc0032" />
 
 ## Project Structure
 
