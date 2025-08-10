@@ -26,7 +26,7 @@ pipeline {
   steps {
     sshagent(['your-credential-id']) {
       sh """
-        ssh -o StrictHostKeyChecking=no ubuntu@<app-server-public-ip> 'bash -s' <<'ENDSSH'
+        ssh -o StrictHostKeyChecking=no ubuntu@http://3.84.240.217/ 'bash -s' <<'ENDSSH'
           cd JenkinsProject || git clone https://github.com/idan5353/JenkinsProject.git JenkinsProject && cd JenkinsProject
           git pull origin main
           npm install
